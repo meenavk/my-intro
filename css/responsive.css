@@ -1,6 +1,5 @@
 
 @media (max-width: 600px) {
-
   .hero-content {
     flex-direction: column;
     text-align: center;
@@ -9,7 +8,6 @@
   .hero-text {
     align-items: center;
   }
-
 }
 
 /* FLOATING ICONS */
@@ -44,7 +42,6 @@
   font-size: 16px;
 
   text-decoration: none;
-
   transition: 0.25s ease;
 }
 
@@ -53,7 +50,7 @@
   color: #38bdf8;
 }
 
-/* MOBILE → bottom bar */
+/* MOBILE FIX */
 @media (max-width: 600px) {
   .floating-contact {
     flex-direction: row;
