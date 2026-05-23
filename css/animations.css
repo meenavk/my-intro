@@ -1,9 +1,5 @@
-.typing-text {
-  font-size: 18px;
-  height: 24px;
-  margin: 0 0 8px 0;
-}
 
+/* TYPING CURSOR */
 .typing-text::after {
   content: "|";
   animation: blink 0.7s infinite;
