@@ -14,16 +14,12 @@ body {
   100% { background-position: 0% 50%; }
 }
 
-/* SMOOTH SCROLL */
-html {
-  scroll-behavior: smooth;
-}
-
 /* HERO */
 .hero {
-  padding: 60px 20px;
+  padding: 70px 20px 50px;
 }
 
+/* FLEX LAYOUT */
 .hero-content {
   max-width: 900px;
   margin: auto;
@@ -34,6 +30,7 @@ html {
   flex-wrap: wrap;
 }
 
+/* PROFILE IMAGE */
 .profile-img {
   width: 130px;
   height: 130px;
@@ -44,45 +41,40 @@ html {
   box-shadow: 0 8px 20px rgba(0,0,0,0.4);
 }
 
+/* TEXT BLOCK */
 .hero-text {
   flex: 1;
   min-width: 250px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-h1 {
+/* NAME */
+.hero-text h1 {
   font-size: 26px;
-  margin: 8px 0;
+  margin: 0 0 6px 0;
   font-weight: 600;
-  color: #ffffff;
 }
 
-.subtitle {
-  font-size: 16px;
-  opacity: 0.85;
-}
-
-/* TYPING */
+/* TYPING TEXT */
 .typing-text {
   font-size: 18px;
-  height: 25px;
-  margin: 10px 0;
-  font-weight: 500;
+  margin: 0 0 8px 0;
+  height: 24px;
+  display: flex;
+  align-items: center;
 }
 
-.typing-text::after {
-  content: "|";
-  animation: blink 0.7s infinite;
-}
-
-@keyframes blink {
-  50% { opacity: 0; }
+/* SUBTITLE */
+.subtitle {
+  font-size: 15px;
+  opacity: 0.85;
+  margin: 0 0 15px 0;
 }
 
 /* BUTTONS */
-.buttons {
-  margin-top: 15px;
-}
-
 .buttons a {
   display: inline-block;
   margin: 5px;
