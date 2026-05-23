@@ -15,40 +15,58 @@ body {
   100% { background-position: 0% 50%; }
 }
 
-/* HERO */
+/* HERO SECTION */
 .hero {
-  text-align: center;
   padding: 60px 20px;
+}
+
+/* HERO FLEX LAYOUT */
+.hero-content {
+  max-width: 900px;
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 25px;
+
+  flex-wrap: wrap;
 }
 
 /* PROFILE IMAGE */
 .profile-container {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 15px;
+  flex-shrink: 0;
 }
 
 .profile-img {
-  width: 120px;
-  height: 120px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
   object-fit: cover;
+
   border: 3px solid white;
   box-shadow: 0 8px 20px rgba(0,0,0,0.4);
 }
 
-/* TEXT */
+/* TEXT AREA */
+.hero-text {
+  flex: 1;
+  min-width: 250px;
+}
+
+/* NAME */
 h1 {
   font-size: 38px;
   margin: 10px 0;
 }
 
+/* SUBTITLE */
 .subtitle {
   font-size: 16px;
   opacity: 0.85;
 }
 
-/* TYPING */
+/* TYPING TEXT */
 .typing-text {
   font-size: 18px;
   height: 25px;
@@ -56,6 +74,7 @@ h1 {
   font-weight: 500;
 }
 
+/* blinking cursor */
 .typing-text::after {
   content: "|";
   animation: blink 0.7s infinite;
@@ -74,11 +93,14 @@ h1 {
   display: inline-block;
   margin: 5px;
   padding: 10px 18px;
+
   background: white;
   color: #0b1220;
+
   border-radius: 25px;
   text-decoration: none;
   font-weight: bold;
+
   transition: 0.3s;
 }
 
@@ -86,7 +108,7 @@ h1 {
   transform: scale(1.05);
 }
 
-/* CARDS */
+/* CARDS (GLASS EFFECT) */
 .card {
   max-width: 900px;
   margin: 25px auto;
@@ -99,6 +121,7 @@ h1 {
   box-shadow: 0 0 15px rgba(0,0,0,0.4);
 }
 
+/* HEADINGS */
 h2 {
   color: #38bdf8;
 }
@@ -114,9 +137,10 @@ h2 {
   background: #1f2937;
   padding: 8px 12px;
   border-radius: 20px;
+  font-size: 14px;
 }
 
-/* PROJECT */
+/* PROJECT CARD */
 .project {
   margin-top: 15px;
   padding: 15px;
@@ -129,4 +153,16 @@ footer {
   text-align: center;
   padding: 20px;
   color: #94a3b8;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 600px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text {
+    min-width: 100%;
+  }
 }
