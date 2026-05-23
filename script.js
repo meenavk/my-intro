@@ -10,7 +10,7 @@ let index = 0;
 let charIndex = 0;
 let isDeleting = false;
 
-function type() {
+function typeEffect() {
   const el = document.querySelector(".typing-text");
 
   if (!el) return;
@@ -37,7 +37,7 @@ function type() {
     speed = 300;
   }
 
-  setTimeout(type, speed);
+  setTimeout(typeEffect, speed);
 }
 
-type();
+typeEffect();
