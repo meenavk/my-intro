@@ -8,6 +8,18 @@ body {
   animation: gradientMove 12s ease infinite;
 }
 
+.card {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 25px;
+
+  background: rgba(17, 24, 39, 0.85);
+  backdrop-filter: blur(10px);
+
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+}
+
 .profile-container {
   display: flex;
   justify-content: center;
