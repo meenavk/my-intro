@@ -50,8 +50,10 @@ html {
 }
 
 h1 {
-  font-size: 38px;
-  margin: 10px 0;
+  font-size: 28px;
+  margin: 8px 0;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
 .subtitle {
