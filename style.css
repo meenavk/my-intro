@@ -8,63 +8,57 @@ body {
   animation: gradientMove 12s ease infinite;
 }
 
-/* BACKGROUND ANIMATION */
 @keyframes gradientMove {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
-/* =========================
-   HERO (APPLE STYLE CENTER)
-========================= */
+/* HERO CENTER */
 .hero {
   min-height: 90vh;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   text-align: center;
   padding: 40px 20px;
 }
 
 .hero-center {
   max-width: 700px;
-
   display: flex;
   flex-direction: column;
   align-items: center;
-
   gap: 10px;
 }
 
-/* PROFILE IMAGE */
+/* PROFILE */
 .profile-img {
   width: 140px;
   height: 140px;
-
   border-radius: 50%;
   object-fit: cover;
 
-  border: 3px solid rgba(255,255,255,0.9);
+  border: 3px solid white;
   box-shadow: 0 10px 25px rgba(0,0,0,0.4);
 }
 
-/* NAME */
-.hero h1 {
+/* TEXT */
+h1 {
   font-size: 30px;
   margin: 0;
-  font-weight: 600;
-  letter-spacing: 0.3px;
 }
 
-/* TYPING TEXT */
+.subtitle {
+  font-size: 15px;
+  opacity: 0.85;
+}
+
+/* TYPING */
 .typing-text {
   font-size: 18px;
   height: 25px;
   margin: 5px 0;
-  font-weight: 500;
 }
 
 .typing-text::after {
@@ -76,19 +70,7 @@ body {
   50% { opacity: 0; }
 }
 
-/* SUBTITLE */
-.subtitle {
-  font-size: 15px;
-  opacity: 0.85;
-  margin: 0 0 10px 0;
-  max-width: 500px;
-}
-
 /* BUTTONS */
-.buttons {
-  margin-top: 10px;
-}
-
 .buttons a {
   display: inline-block;
   margin: 5px;
@@ -101,16 +83,14 @@ body {
   text-decoration: none;
   font-weight: bold;
 
-  transition: 0.3s ease;
+  transition: 0.3s;
 }
 
 .buttons a:hover {
   transform: scale(1.05);
 }
 
-/* =========================
-   GLASS CARDS
-========================= */
+/* CARDS */
 .card {
   max-width: 900px;
   margin: 25px auto;
@@ -125,12 +105,9 @@ body {
 
 h2 {
   color: #38bdf8;
-  margin-bottom: 10px;
 }
 
-/* =========================
-   SKILLS
-========================= */
+/* SKILLS */
 .grid {
   display: flex;
   flex-wrap: wrap;
@@ -144,20 +121,15 @@ h2 {
   font-size: 14px;
 }
 
-/* =========================
-   PROJECTS
-========================= */
+/* PROJECT */
 .project {
   margin-top: 15px;
   padding: 15px;
-
   background: #1f2937;
   border-radius: 10px;
 }
 
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 footer {
   text-align: center;
   padding: 20px;
@@ -165,24 +137,15 @@ footer {
 }
 
 /* =========================
-   MOBILE RESPONSIVE
+   FADE-IN ANIMATION (NEW)
 ========================= */
-@media (max-width: 600px) {
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
 
-  .hero h1 {
-    font-size: 24px;
-  }
-
-  .profile-img {
-    width: 110px;
-    height: 110px;
-  }
-
-  .subtitle {
-    font-size: 14px;
-  }
-
-  .buttons a {
-    padding: 8px 14px;
-  }
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
 }
