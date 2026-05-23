@@ -8,73 +8,87 @@ body {
   animation: gradientMove 12s ease infinite;
 }
 
+/* BACKGROUND ANIMATION */
 @keyframes gradientMove {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
-/* HERO */
+/* =========================
+   HERO (APPLE STYLE CENTER)
+========================= */
 .hero {
-  padding: 20px 20px 20px;
-}
-
-/* FLEX LAYOUT */
-.hero-content {
-  max-width: 900px;
-  margin: auto;
+  min-height: 90vh;
 
   display: flex;
   align-items: center;
-  gap: 25px;
-  flex-wrap: wrap;
+  justify-content: center;
+
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.hero-center {
+  max-width: 700px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 10px;
 }
 
 /* PROFILE IMAGE */
 .profile-img {
-  width: 130px;
-  height: 130px;
+  width: 140px;
+  height: 140px;
+
   border-radius: 50%;
   object-fit: cover;
 
-  border: 3px solid white;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-}
-
-/* TEXT BLOCK */
-.hero-text {
-  flex: 1;
-  min-width: 250px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  border: 3px solid rgba(255,255,255,0.9);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
 }
 
 /* NAME */
-.hero-text h1 {
-  font-size: 16px;
-  margin: 0 0 6px 0;
+.hero h1 {
+  font-size: 30px;
+  margin: 0;
   font-weight: 600;
+  letter-spacing: 0.3px;
 }
 
 /* TYPING TEXT */
 .typing-text {
   font-size: 18px;
-  margin: 0 0 8px 0;
-  height: 24px;
-  display: flex;
-  align-items: center;
+  height: 25px;
+  margin: 5px 0;
+  font-weight: 500;
+}
+
+.typing-text::after {
+  content: "|";
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
 }
 
 /* SUBTITLE */
 .subtitle {
   font-size: 15px;
   opacity: 0.85;
-  margin: 0 0 15px 0;
+  margin: 0 0 10px 0;
+  max-width: 500px;
 }
 
 /* BUTTONS */
+.buttons {
+  margin-top: 10px;
+}
+
 .buttons a {
   display: inline-block;
   margin: 5px;
@@ -87,21 +101,23 @@ body {
   text-decoration: none;
   font-weight: bold;
 
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 
 .buttons a:hover {
   transform: scale(1.05);
 }
 
-/* CARDS */
+/* =========================
+   GLASS CARDS
+========================= */
 .card {
   max-width: 900px;
   margin: 25px auto;
   padding: 25px;
 
   background: rgba(17, 24, 39, 0.85);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(12px);
 
   border-radius: 15px;
   box-shadow: 0 0 15px rgba(0,0,0,0.4);
@@ -109,9 +125,12 @@ body {
 
 h2 {
   color: #38bdf8;
+  margin-bottom: 10px;
 }
 
-/* SKILLS */
+/* =========================
+   SKILLS
+========================= */
 .grid {
   display: flex;
   flex-wrap: wrap;
@@ -125,29 +144,45 @@ h2 {
   font-size: 14px;
 }
 
-/* PROJECT */
+/* =========================
+   PROJECTS
+========================= */
 .project {
   margin-top: 15px;
   padding: 15px;
+
   background: #1f2937;
   border-radius: 10px;
 }
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 footer {
   text-align: center;
   padding: 20px;
   color: #94a3b8;
 }
 
-/* MOBILE */
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
 @media (max-width: 600px) {
-  .hero-content {
-    flex-direction: column;
-    text-align: center;
+
+  .hero h1 {
+    font-size: 24px;
   }
 
-  .hero-text {
-    min-width: 100%;
+  .profile-img {
+    width: 110px;
+    height: 110px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+
+  .buttons a {
+    padding: 8px 14px;
   }
 }
