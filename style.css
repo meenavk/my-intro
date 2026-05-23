@@ -8,34 +8,77 @@ body {
   animation: gradientMove 12s ease infinite;
 }
 
-/* BACKGROUND ANIMATION */
 @keyframes gradientMove {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
-/* HERO SECTION */
+/* SMOOTH SCROLL */
+html {
+  scroll-behavior: smooth;
+}
+
+/* NAVBAR */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  background: rgba(11, 18, 32, 0.85);
+  backdrop-filter: blur(10px);
+
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.nav-container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 12px 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: bold;
+  color: #38bdf8;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #e5e7eb;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #38bdf8;
+}
+
+/* HERO */
 .hero {
   padding: 60px 20px;
 }
 
-/* HERO FLEX LAYOUT */
 .hero-content {
   max-width: 900px;
   margin: auto;
 
   display: flex;
   align-items: center;
-  justify-content: flex-start;
   gap: 25px;
-
   flex-wrap: wrap;
-}
-
-/* PROFILE IMAGE */
-.profile-container {
-  flex-shrink: 0;
 }
 
 .profile-img {
@@ -48,25 +91,22 @@ body {
   box-shadow: 0 8px 20px rgba(0,0,0,0.4);
 }
 
-/* TEXT AREA */
 .hero-text {
   flex: 1;
   min-width: 250px;
 }
 
-/* NAME */
 h1 {
   font-size: 38px;
   margin: 10px 0;
 }
 
-/* SUBTITLE */
 .subtitle {
   font-size: 16px;
   opacity: 0.85;
 }
 
-/* TYPING TEXT */
+/* TYPING */
 .typing-text {
   font-size: 18px;
   height: 25px;
@@ -74,7 +114,6 @@ h1 {
   font-weight: 500;
 }
 
-/* blinking cursor */
 .typing-text::after {
   content: "|";
   animation: blink 0.7s infinite;
@@ -108,7 +147,7 @@ h1 {
   transform: scale(1.05);
 }
 
-/* CARDS (GLASS EFFECT) */
+/* CARDS */
 .card {
   max-width: 900px;
   margin: 25px auto;
@@ -121,7 +160,6 @@ h1 {
   box-shadow: 0 0 15px rgba(0,0,0,0.4);
 }
 
-/* HEADINGS */
 h2 {
   color: #38bdf8;
 }
@@ -140,7 +178,7 @@ h2 {
   font-size: 14px;
 }
 
-/* PROJECT CARD */
+/* PROJECT */
 .project {
   margin-top: 15px;
   padding: 15px;
@@ -155,7 +193,7 @@ footer {
   color: #94a3b8;
 }
 
-/* MOBILE RESPONSIVE */
+/* MOBILE */
 @media (max-width: 600px) {
   .hero-content {
     flex-direction: column;
