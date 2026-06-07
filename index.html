@@ -1,98 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Vinod | Automation Engineer</title>
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta charset="UTF-8" />
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/base.css"/>
-  <link rel="stylesheet" href="css/hero.css"/>
-  <link rel="stylesheet" href="css/cards.css"/>
-  <link rel="stylesheet" href="css/animations.css"/>
-  <link rel="stylesheet" href="css/responsive.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>
+        Vinod Meena Intro
+    </title>
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/landing-animation.css" />
+    <link rel="stylesheet" href="css/hero.css" />
+    <link rel="stylesheet" href="css/cards.css" />
+    <link rel="stylesheet" href="css/summary.css" />
+    <link rel="stylesheet" href="css/expertise.css" />
+    <link rel="stylesheet" href="css/skills.css" />
+    <link rel="stylesheet" href="css/experience.css" />
+    <link rel="stylesheet" href="css/projects.css" />
+    <link rel="stylesheet" href="css/education.css" />
+    <link rel="stylesheet" href="css/technologies.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+
 </head>
 
 <body>
 
-  <!-- HERO -->
-  <header class="hero">
-    <div class="hero-content fade-in">
+    <!-- =========================
+         NAVBAR
+    ========================== -->
 
-      <img src="profile.jpg" class="profile-img"/>
+    <nav class="navbar navbar-hidden">
 
-      <div class="hero-text">
-        <h1>Hi, I'm Vinod 👋</h1>
+        <!-- LEFT -->
+        <div class="nav-left">
 
-        <p class="typing-text"></p>
-       
-      </div>
+            <div class="nav-profile-wrapper">
+
+                <img src="images/profile.jpg" class="nav-profile-img" />
+
+            </div>
+
+            <div class="nav-logo">
+                Vinod Meena
+            </div>
+
+        </div>
+
+        <!-- CENTER LINKS -->
+        <div class="nav-links">
+
+            <a href="#hero-section">
+                <i class="fa-solid fa-house"></i>
+                <span>Home</span>
+            </a>            
+
+            <a href="#summary-container">
+                <i class="fa-solid fa-file-lines"></i>
+                <span>Summary</span>
+            </a>
+
+            <a href="#about-container">
+                <i class="fa-solid fa-user"></i>
+                <span>About</span>
+            </a>
+
+            <a href="#expertise-container">
+                <i class="fa-solid fa-layer-group"></i>
+                <span>Expertise</span>
+            </a>
+
+            <a href="#skills-container">
+                <i class="fa-solid fa-gears"></i>
+                <span>Skills</span>
+            </a>
+
+            <a href="#experience-container">
+                <i class="fa-solid fa-briefcase"></i>
+                <span>Experience</span>
+            </a>
+
+             <a href="#education-container">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span>Education</span>
+            </a>
+
+            <a href="#projects-container">
+                <i class="fa-solid fa-diagram-project"></i>
+                <span>Projects</span>
+            </a>           
+
+            <a href="#technologies-container">
+                <i class="fa-solid fa-microchip"></i>
+                <span>Technologies</span>
+            </a>
+
+            <a href="#contact-container">
+                <i class="fa-solid fa-envelope"></i>
+                <span>Contact</span>
+            </a>
+
+        </div>
+
+    </nav>
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <header class="hero hero-center" id="hero-section">
+
+        <div class="hero-content fade-in">
+
+            <img src="images/profile.jpg" class="profile-img" />
+
+            <div class="hero-text">
+
+                <h1>
+                    Hi, I'm Vinod 👋
+                </h1>
+
+                <p class="subtitle">
+                    PC&IS Leader • Digital Manufacturing • Industrial AI
+                </p>
+
+                <p class="typing-text"></p>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- =========================
+         DYNAMIC SECTIONS
+    ========================== -->    
+
+    <!-- SUMMARY -->
+    <div id="summary-container" class="animated-section"></div>
+
+    <!-- ABOUT -->
+    <div id="about-container" class="animated-section"></div>
+
+    <!-- EXPERTISE -->
+    <div id="expertise-container" class="animated-section"></div>
+
+    <!-- SKILLS -->
+    <div id="skills-container" class="animated-section"></div>
+
+    <!-- EXPERIENCE -->
+    <div id="experience-container" class="animated-section"></div>
+
+    <!-- EDUCATION -->
+    <div id="education-container" class="animated-section"></div>    
+
+    <!-- PROJECTS -->
+    <div id="projects-container" class="animated-section"></div>
+
+    <!-- TECHNOLOGIES -->
+    <div id="technologies-container" class="animated-section"></div>
+
+    <!-- CONTACT -->
+    <div id="contact-container" class="animated-section"></div>
+
+    <!-- FOOTER -->
+    <div id="footer-container" class="animated-section"></div>
+
+    <!-- =========================
+         FLOATING CONTACT ICONS
+    ========================== -->
+
+    <div class="floating-contact">
+
+        <div class="icon-wrapper">
+
+            <a href="https://github.com/meenavk" target="_blank" class="float-icon">
+
+                <i class="fa-brands fa-github"></i>
+
+            </a>
+
+            <span class="icon-tooltip">
+                github.com/meenavk
+            </span>
+
+        </div>
+
+        <div class="icon-wrapper">
+
+            <a href="https://www.linkedin.com/in/vinod-meena" target="_blank" class="float-icon">
+
+                <i class="fa-brands fa-linkedin"></i>
+
+            </a>
+
+            <span class="icon-tooltip">
+                linkedin.com/in/vinod-meena
+            </span>
+
+        </div>
+
+        <div class="icon-wrapper">
+
+            <a href="mailto:meenavinod017@yahoo.com" class="float-icon">
+
+                <i class="fa-solid fa-envelope"></i>
+
+            </a>
+
+            <span class="icon-tooltip">
+                meenavinod017@yahoo.com
+            </span>
+
+        </div>
+
+        <div class="icon-wrapper">
+
+            <a href="tel:+919981155389" class="float-icon">
+
+                <i class="fa-solid fa-phone"></i>
+
+            </a>
+
+            <span class="icon-tooltip">
+                +91 99811 55389
+            </span>
+
+        </div>
 
     </div>
-  </header>
 
-  <!-- ABOUT -->
-  <section class="card fade-in">
-    <h2>About Me</h2>
-    <p>
-      I design industrial automation systems using PLCs and software tools.
-    </p>
-  </section>
+    <!-- =========================
+         IMAGE MODAL
+    ========================== -->
 
-  <!-- SKILLS -->
-  <section class="card fade-in">
-    <h2>Skills</h2>
-    <div class="grid">
-      <span>PLC Programming</span>
-      <span>Python</span>
-      <span>React</span>
-      <span>RSLogix</span>
-    </div>
-  </section>
+    <div id="imageModal" class="image-modal">
 
-  <!-- PROJECTS -->
-  <section class="card fade-in">
-    <h2>Projects</h2>
+        <span id="closeModal">
+            &times;
+        </span>
 
-    <div class="project">
-      <h3>RSLogix Analyzer</h3>
-      <p>PLC XML logic explanation tool.</p>
+        <img id="modalImage" class="modal-image">
+
     </div>
 
-    <div class="project">
-      <h3>Fault System</h3>
-      <p>Automated fault mapping tool.</p>
-    </div>
-  </section>
+    <!-- SCRIPT -->
+    <script type="module" src="js/main.js"></script>
 
-  <!-- FLOATING CONTACT ICONS -->
-  <div class="floating-contact">
-
-    <a href="https://github.com/meenavk" target="_blank" class="float-icon">
-      <i class="fa-brands fa-github"></i>
-    </a>
-
-    <a href="https://www.linkedin.com/in/your-profile" target="_blank" class="float-icon">
-      <i class="fa-brands fa-linkedin"></i>
-    </a>
-
-    <a href="mailto:yourmail@gmail.com" class="float-icon">
-      <i class="fa-solid fa-envelope"></i>
-    </a>
-
-    <a href="tel:+919XXXXXXXXX" class="float-icon">
-      <i class="fa-solid fa-phone"></i>
-    </a>
-
-  </div>
-
-  <footer class="fade-in">
-    © 2026 Vinod
-  </footer>
-
-  <script src="script.js"></script>
 </body>
+
 </html>
