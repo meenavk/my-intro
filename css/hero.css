@@ -1,58 +1,246 @@
+/* =========================
+   HERO
+========================= */
 
 .hero {
-  padding: 60px 20px 30px;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    transition:
+        min-height 1.5s ease,
+        padding 1.5s ease;
 }
+
+
+/* =========================
+   HERO AFTER ANIMATION
+========================= */
+
+.hero.hero-top {
+
+    min-height: 100px;
+
+    padding: 110px 10px 10px;
+}
+
 
 .hero-content {
-  max-width: 900px;
-  margin: 0 auto;
 
-  display: flex;
-  align-items: center;
-  gap: 25px;
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 28px;
+
+    transition:
+        transform 1.5s ease,
+        opacity 1.5s ease;
 }
 
-/* IMAGE */
+
+/* =========================
+   PROFILE IMAGE
+========================= */
+
 .profile-img {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
 
-  object-fit: cover;
+    width: 140px;
 
-  border: 3px solid rgba(255,255,255,0.9);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    height: 140px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    border: 3px solid rgba(255,255,255,0.9);
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.4);
 }
 
-/* TEXT */
+
+/* =========================
+   HERO TEXT
+========================= */
+
 .hero-text {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 700px;
 }
+
 
 .hero-text h1 {
-  font-size: 28px;
-  margin: 0 0 6px 0;
+
+    font-size: 32px;
+
+    margin: 0 0 8px 0;
+
+    line-height: 1.2;
 }
+
 
 .subtitle {
-  font-size: 15px;
-  opacity: 0.85;
-  margin: 0;
+
+    font-size: 15px;
+
+    opacity: 0.85;
+
+    margin: 0 0 10px 0;
 }
 
-/* TYPING */
+
+/* =========================
+   TYPING TEXT
+========================= */
+
 .typing-text {
-  font-size: 18px;
-  height: 24px;
-  margin: 0 0 8px 0;
+
+    font-size: 18px;
+
+    height: 24px;
+
+    margin: 0 0 18px 0;
+
+    color: #cbd5e1;
 }
+
 
 .typing-text::after {
-  content: "|";
-  animation: blink 0.7s infinite;
+
+    content: "|";
+
+    animation: blink 0.7s infinite;
 }
 
+
 @keyframes blink {
-  50% { opacity: 0; }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+
+/* =========================
+   HERO BUTTONS
+========================= */
+
+.hero-buttons {
+
+    display: flex;
+
+    gap: 14px;
+
+    flex-wrap: wrap;
+
+    margin-top: 4px;
+}
+
+
+.hero-btn {
+
+    padding: 12px 22px;
+
+    border-radius: 12px;
+
+    background: #38bdf8;
+
+    color: #0f172a;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition: 0.25s ease;
+}
+
+
+.hero-btn:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(56, 189, 248, 0.25);
+}
+
+
+.hero-btn-outline {
+
+    background: transparent;
+
+    color: #e2e8f0;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+
+.hero-btn-outline:hover {
+
+    background: rgba(255, 255, 255, 0.06);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .hero {
+
+        min-height: 100vh;
+
+        padding: 20px;
+    }
+
+    .hero.hero-top {
+
+        min-height: 300px;
+
+        padding: 90px 20px 30px;
+    }
+
+    .hero-content {
+
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .profile-img {
+
+        width: 120px;
+
+        height: 120px;
+    }
+
+    .hero-text h1 {
+
+        font-size: 2rem;
+    }
+
+    .typing-text {
+
+        font-size: 1rem;
+    }
+
+    .hero-buttons {
+
+        justify-content: center;
+    }
 }
