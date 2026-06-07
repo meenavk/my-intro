@@ -10,7 +10,7 @@ It showcases my engineering background, automation experience, technical skills,
 
 ## 🚀 Live Demo
 
-Add your deployed link here (GitHub Pages / Vercel / Netlify)
+[Add your deployed link here (GitHub Pages / Vercel / Netlify)](https://meenavk.github.io/my-intro/)
 
 ---
 
