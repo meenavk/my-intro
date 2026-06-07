@@ -1,98 +1,77 @@
 // =========================
-// IMAGE MODAL
+// NAVBAR ACTIVE LINK
 // =========================
 
-export function initializeImagePreview() {
+export function initializeNavbarHighlight() {
 
-    const modal =
-        document.getElementById(
-            "imageModal"
+    const navLinks =
+        document.querySelectorAll(
+            ".nav-links a"
         );
 
-    const modalImg =
-        document.getElementById(
-            "modalImage"
-        );
+    if (!navLinks.length) return;
 
-    const closeBtn =
-        document.getElementById(
-            "closeModal"
-        );
+    function updateActiveLink() {
 
-    if (
-        !modal ||
-        !modalImg ||
-        !closeBtn
-    ) {
-        return;
-    }
+        
 
-    function attachEvents() {
+        let currentSection =
+            "hero-section";
 
-        const images =
-            document.querySelectorAll(
-                ".preview-image"
+        const scrollPosition =
+            window.scrollY + 65;
+
+        navLinks.forEach(link => {
+
+            const targetId =
+                link.getAttribute("href")
+                    .replace("#", "");
+
+            const section =
+                document.getElementById(
+                    targetId
+                );
+
+            if (!section) return;
+
+            if (
+                scrollPosition >=
+                section.offsetTop
+            ) {
+
+                currentSection =
+                    targetId;
+
+            }
+
+        });
+
+        navLinks.forEach(link => {
+
+            link.classList.remove(
+                "active"
             );
 
-        images.forEach(img => {
+            if (
+                link.getAttribute("href") ===
+                `#${currentSection}`
+            ) {
 
-            img.addEventListener(
-                "click",
-                () => {
+                link.classList.add(
+                    "active"
+                );
 
-                    modal.style.display =
-                        "flex";
-
-                    modalImg.src =
-                        img.src;
-
-                }
-            );
+            }
 
         });
 
     }
 
-    attachEvents();
-
-    closeBtn.addEventListener(
-        "click",
-        () => {
-
-            modal.style.display =
-                "none";
-
-        }
+    window.addEventListener(
+        "scroll",
+        updateActiveLink
     );
 
-    modal.addEventListener(
-        "click",
-        (e) => {
-
-            if (e.target === modal) {
-
-                modal.style.display =
-                    "none";
-
-            }
-
-        }
-    );
-
-    document.addEventListener(
-        "keydown",
-        (e) => {
-
-            if (
-                e.key === "Escape"
-            ) {
-
-                modal.style.display =
-                    "none";
-
-            }
-
-        }
-    );
+    updateActiveLink();
 
 }
