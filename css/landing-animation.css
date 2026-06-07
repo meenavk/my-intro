@@ -1,0 +1,44 @@
+/* =========================
+   INITIAL SECTION STATE
+========================= */
+
+.animated-section {
+
+    opacity: 0;
+
+    transition:
+        opacity 1s ease,
+        transform 1s ease;
+}
+
+
+/* =========================
+   LEFT ENTRY
+========================= */
+
+.slide-left {
+
+    transform: translateX(-120px);
+}
+
+
+/* =========================
+   RIGHT ENTRY
+========================= */
+
+.slide-right {
+
+    transform: translateX(120px);
+}
+
+
+/* =========================
+   SHOW
+========================= */
+
+.show-section {
+
+    opacity: 1;
+
+    transform: translateX(0);
+}
