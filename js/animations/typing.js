@@ -4,7 +4,7 @@
 
 const text =
     "Automation & Digital Manufacturing | PLC/SCADA (Rockwell) | GuardLogix & Machine Safety | Motion Control | Cognex Vision | MES | OT-IT Integration | Industry 4.0 | Python, Django, OpenCV | AI-Driven Industrial Solutions";
-
+    
 let index = 0;
 let typingElement = null;
 let isTyping = false;
