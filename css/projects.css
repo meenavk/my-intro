@@ -259,19 +259,79 @@
 @media (max-width: 768px) {
 
     .projects-carousel {
-        padding: 0 40px;
+
+        padding: 0;
+
+        position: relative;
+    }
+
+    .project-group {
+
+        flex: 0 0 100%;
+
+        min-width: 100%;
     }
 
     .project-img {
+
         height: 220px;
     }
 
+    /* Small floating arrows */
     .carousel-btn {
-        width: 42px;
-        height: 42px;
+
+        width: 38px;
+
+        height: 38px;
+
+        font-size: 14px;
+
+        background: rgba(15, 23, 42, 0.9);
+
+        border: 1px solid rgba(56,189,248,0.25);
+
+        box-shadow: 0 0 10px rgba(0,0,0,0.3);
     }
 
     .carousel-btn i {
-        font-size: 16px;
+
+        font-size: 14px;
+    }
+
+    /* Position arrows at card edges */
+    .prev-btn {
+
+        left: -8px;
+    }
+
+    .next-btn {
+
+        right: -8px;
+    }
+
+    /* Always visible */
+    .carousel-btn {
+
+        opacity: 1;
+    }
+
+    /* Subtle swipe hint */
+    .projects-wrapper::after {
+
+        content: "← Swipe →";
+
+        position: absolute;
+
+        bottom: 8px;
+
+        left: 50%;
+
+        transform: translateX(-50%);
+
+        font-size: 11px;
+
+        color: rgba(255,255,255,0.45);
+
+        pointer-events: none;
     }
 }
