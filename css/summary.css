@@ -15,10 +15,10 @@
 
 /* BUTTON */
 .toggle-btn {
-    background: rgba(255,255,255,0.08);
+    background: rgba(255, 255, 255, 0.08);
     color: #e5e7eb;
 
-    border: 1px solid rgba(255,255,255,0.15);
+    border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 20px;
 
     padding: 8px 14px;
@@ -49,3 +49,4 @@
     opacity: 1;
     transform: translateY(0);
 }
+
