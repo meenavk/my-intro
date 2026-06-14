@@ -271,3 +271,118 @@
 
     pointer-events: auto;
 }
+
+/* =========================
+   MOBILE NAVBAR
+========================= */
+
+@media (max-width: 768px) {
+
+    /* Compact navbar */
+    .navbar {
+
+        height: auto;
+
+        min-height: 50px;
+
+        padding: 6px 8px;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        gap: 6px;
+    }
+
+    /* Hide desktop profile/logo */
+    .nav-left {
+
+        display: none;
+    }
+
+    /* Single-row scrollable icon bar */
+    .nav-links {
+
+        width: 100%;
+
+        display: flex;
+
+        flex-wrap: nowrap;
+
+        justify-content: flex-start;
+
+        align-items: center;
+
+        gap: 6px;
+
+        overflow-x: auto;
+
+        overflow-y: hidden;
+
+        padding: 0 4px;
+
+        scrollbar-width: none;
+
+        -ms-overflow-style: none;
+    }
+
+    .nav-links::-webkit-scrollbar {
+
+        display: none;
+    }
+
+    /* Icon buttons */
+    .nav-links a {
+
+        flex: 0 0 auto;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        width: 34px;
+
+        height: 34px;
+
+        border-radius: 50%;
+
+        background: rgba(255,255,255,0.05);
+
+        border: 1px solid rgba(255,255,255,0.08);
+
+        padding: 0;
+
+        transition: all 0.25s ease;
+    }
+
+    /* Hide text labels */
+    .nav-links a span {
+
+        display: none;
+    }
+
+    /* Icon size */
+    .nav-links a i {
+
+        font-size: 14px;
+    }
+
+    /* Remove underline animation */
+    .nav-links a::after {
+
+        display: none;
+    }
+
+    /* Active icon */
+    .nav-links a.active {
+
+        background: rgba(56,189,248,0.15);
+
+        border-color: rgba(56,189,248,0.35);
+
+        box-shadow:
+            0 0 12px rgba(56,189,248,0.25);
+    }
+}
