@@ -1,426 +1,381 @@
 /* =========================
-   EXPERIENCE SECTION
+   CORE EXPERTISE
 ========================= */
 
-.experience-wrapper {
-  position: relative;
+.expertise-section {
 
-  margin-top: 35px;
-
-  padding-left: 45px;
-}
-
-
-/* MAIN TIMELINE LINE */
-.experience-wrapper::before {
-  content: "";
-
-  position: absolute;
-
-  left: 14px;
-  top: 0;
-  bottom: 0;
-
-  width: 2px;
-
-  background: rgba(56, 189, 248, 0.25);
-
-  z-index: 0;
-}
-
-
-/* ROLE GROUP */
-.experience-group {
-  position: relative;
-
-  margin-bottom: 20px;
-}
-
-
-/* CONNECTOR DOT */
-.experience-group::before {
-  content: "";
-
-  position: absolute;
-
-  left: -38px;
-  top: 32px;
-
-  width: 14px;
-  height: 14px;
-
-  border-radius: 50%;
-
-  background: #38bdf8;
-
-  box-shadow: 0 0 12px rgba(56, 189, 248, 0.5);
-
-  z-index: 3;
-}
-
-
-/* CONNECTOR LINE */
-.experience-group::after {
-  content: "";
-
-  position: absolute;
-
-  left: -24px;
-  top: 38px;
-
-  width: 24px;
-  height: 2px;
-
-  background: rgba(56, 189, 248, 0.25);
-
-  z-index: 1;
-}
-
-
-/* ROLE CARD */
-.experience-role {
-  position: relative;
-
-  background: rgba(255, 255, 255, 0.04);
-
-  border: 1px solid rgba(255, 255, 255, 0.06);
-
-  border-radius: 20px;
-
-  padding: 24px;
-
-  transition: 0.3s ease;
-
-  overflow: hidden;
-
-  z-index: 2;
-}
-
-
-.experience-role:hover {
-  transform: translateY(-4px);
-
-  border-color: rgba(56, 189, 248, 0.3);
-
-  background: rgba(56, 189, 248, 0.05);
-}
-
-
-/* CURRENT ROLE */
-.current-role .experience-role {
-  border-left: 4px solid #38bdf8;
-}
-
-
-/* PREVIOUS ROLE */
-.secondary-role .experience-role {
-  border-left: 4px solid rgba(255, 255, 255, 0.18);
-}
-
-
-/* ROLE BADGE */
-.role-badge {
-  display: inline-flex;
-
-  align-items: center;
-
-  gap: 8px;
-
-  margin-bottom: 16px;
-
-  padding: 7px 14px;
-
-  border-radius: 30px;
-
-  background: rgba(56, 189, 248, 0.14);
-
-  color: #38bdf8;
-
-  font-size: 12px;
-
-  font-weight: 600;
-}
-
-
-.secondary-badge {
-  background: rgba(255, 255, 255, 0.08);
-
-  color: rgba(255, 255, 255, 0.7);
-}
-
-
-/* ROLE TITLE */
-.experience-role h3 {
-  margin-top: 0;
-  margin-bottom: 8px;
-
-  font-size: 22px;
-
-  line-height: 1.3;
-}
-
-
-/* COMPANY */
-.experience-role h4 {
-  margin-top: 0;
-  margin-bottom: 12px;
-
-  font-size: 15px;
-
-  color: rgba(255, 255, 255, 0.75);
-}
-
-
-/* DATE */
-.timeline-date {
-  display: inline-block;
-
-  margin-bottom: 18px;
-
-  font-size: 13px;
-
-  color: #38bdf8;
-}
-
-
-/* DESCRIPTION */
-.experience-role p {
-  line-height: 1.7;
-
-  font-size: 14px;
-
-  color: rgba(255, 255, 255, 0.88);
-}
-
-
-/* TAGS */
-.timeline-tags {
-  display: flex;
-
-  flex-wrap: wrap;
-
-  gap: 8px;
-
-  margin-top: 18px;
-}
-
-
-.timeline-tags span {
-  background: rgba(56, 189, 248, 0.12);
-
-  color: #38bdf8;
-
-  padding: 6px 12px;
-
-  border-radius: 30px;
-
-  font-size: 12px;
-}
-
-
-/* DETAILS */
-.role-details {
-  max-height: 0;
-  overflow: hidden;
-
-  opacity: 0;
-  transform: translateY(-10px);
-
-  transition: all 0.5s ease;
-}
-
-.experience-group.active .role-details {
-  max-height: 2000px;
-  opacity: 1;
-  transform: translateY(0);
-}
-
-
-/* DETAILS BLOCK */
-.experience-details {
-  margin-bottom: 24px;
-}
-
-
-/* DETAIL TITLE */
-.experience-details h3 {
-  margin-bottom: 12px;
-
-  font-size: 17px;
-
-  color: #38bdf8;
-}
-
-
-/* LIST */
-.exp-list {
-  margin: 0;
-
-  padding-left: 20px;
-}
-
-
-.exp-list li {
-  margin-bottom: 12px;
-
-  line-height: 1.7;
-
-  color: rgba(255, 255, 255, 0.82);
-}
-
-
-/* TOGGLE BUTTON */
-.role-toggle-btn {
-  position: absolute;
-
-  top: 22px;
-  right: 22px;
-
-  padding: 8px 16px;
-
-  border: none;
-
-  border-radius: 12px;
-
-  background: rgba(56, 189, 248, 0.12);
-
-  color: #38bdf8;
-
-  font-size: 13px;
-
-  font-weight: 600;
-
-  cursor: pointer;
-
-  transition: 0.3s ease;
-}
-
-
-.role-toggle-btn:hover {
-  background: rgba(56, 189, 248, 0.22);
-
-  transform: translateY(-2px);
-}
-
-/* =========================
-   ROLE META
-========================= */
-
-.role-meta {
-  display: flex;
-
-  justify-content: space-between;
-
-  align-items: center;
-
-  gap: 20px;
-
-  margin-bottom: 18px;
-
-  flex-wrap: wrap;
-}
-
-
-/* COMPANY */
-.role-meta h4 {
-  margin: 0;
-
-  font-size: 15px;
-
-  color: rgba(255, 255, 255, 0.75);
-}
-
-
-/* DATE */
-.role-meta .timeline-date {
-  margin: 0;
-
-  font-size: 13px;
-
-  color: #38bdf8;
-
-  white-space: nowrap;
+    padding: 0px 0%;
 }
 
 
 /* =========================
-   MOBILE RESPONSIVENESS
+   GRID
+========================= */
+
+.expertise-card .expertise-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(240px, 1fr));
+
+    gap: 16px;
+
+    margin-top: 28px;
+}
+
+
+/* =========================
+   EXPERTISE ITEM
+========================= */
+
+.expertise-card .expertise-item {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 18px 20px;    
+
+    min-height: 82px;
+
+    border-radius: 16px;
+
+    background:
+        rgba(255, 255, 255, 0.035);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.06);
+
+    overflow: hidden;
+
+    transition:
+        all 0.28s ease;
+}
+
+
+/* =========================
+   LEFT ACCENT
+========================= */
+
+.expertise-card .expertise-item::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+    bottom: 0;
+
+    width: 4px;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(180deg,
+            #38bdf8,
+            #0ea5e9);
+}
+
+
+/* =========================
+   HOVER EFFECT
+========================= */
+
+.expertise-card .expertise-item:hover {
+
+    transform: translateY(-4px);
+
+    background:
+        rgba(56, 189, 248, 0.08);
+
+    border-color:
+        rgba(56, 189, 248, 0.20);
+
+    box-shadow:
+        0 10px 28px rgba(0, 0, 0, 0.24);
+}
+
+
+/* =========================
+   ICON
+========================= */
+
+.expertise-card .expertise-item i {
+
+    width: 44px;
+    height: 44px;
+
+    min-width: 44px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background:
+        rgba(56, 189, 248, 0.12);
+
+    color: #38bdf8;
+
+    font-size: 18px;
+
+    transition: 0.25s ease;
+
+    z-index: 2;
+}
+
+
+/* ICON HOVER */
+.expertise-card .expertise-item:hover i {
+
+    transform: scale(1.06);
+
+    background:
+        rgba(56, 189, 248, 0.20);
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+.expertise-card .expertise-item span {
+
+    color: #f1f5f9;
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+    line-height: 1.5;
+
+    transition: all 0.25s ease;
+
+    z-index: 2;
+}
+
+
+/* HIDE TITLE ON HOVER */
+.expertise-card .expertise-item:hover span {
+
+    opacity: 0;
+
+    transform: translateY(-8px);
+}
+
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.expertise-desc {
+
+    position: absolute;
+
+    left: 78px;
+
+    right: 18px;
+
+    top: 50%;
+
+    transform: translateY(10px);
+
+    opacity: 0;
+
+    color: #dbeafe;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+    transition: all 0.28s ease;
+
+    pointer-events: none;
+}
+
+
+/* SHOW DESCRIPTION ON HOVER */
+.expertise-card .expertise-item:hover .expertise-desc {
+
+    opacity: 1;
+
+    transform: translateY(-50%);
+}
+
+
+/* =========================
+   DETAILED GRID
+========================= */
+
+.expertise-card .detailed-grid {
+
+    margin-top: 18px;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+}
+
+
+/* =========================
+   DETAILED ITEMS
+========================= */
+
+.expertise-card .detailed-grid .expertise-item {
+
+    min-height: 78px;
+}
+
+
+/* =========================
+   RESPONSIVE
 ========================= */
 
 @media (max-width: 768px) {
 
-    .experience-wrapper {
+    .expertise-card .expertise-grid {
 
-        margin-top: 10px;
-
-        padding-left: 22px;
+        grid-template-columns:
+            repeat(auto-fit, minmax(180px, 1fr));
     }
 
-    /* Vertical timeline */
-    .experience-wrapper::before {
+    .expertise-desc {
 
-        left: 8px;
+        font-size: 12px;
+
+        left: 72px;
     }
+}
 
-    /* Timeline dot */
-    .experience-group::before {
+/* =========================
+   AUTO HOVER EFFECT
+========================= */
 
-        left: -19px;
-        top: 30px;
+.expertise-card .expertise-item.auto-hover {
 
-        width: 12px;
-        height: 12px;
-    }
+    transform: translateY(-4px);
 
-    /* Connector line */
-    .experience-group::after {
+    background:
+        rgba(56, 189, 248, 0.08);
 
-        left: -7px;
-        top: 36px;
+    border-color:
+        rgba(56, 189, 248, 0.20);
 
-        width: 6px;
-        height: 2px;
-    }
+    box-shadow:
+        0 10px 28px rgba(0, 0, 0, 0.24);
+}
 
-    /* Card */
-    .experience-role {
 
-        padding: 16px;
-    }
+/* ICON EFFECT */
+.expertise-card .expertise-item.auto-hover i {
 
-    /* Title */
-    .experience-role h3 {
+    transform: scale(1.06);
 
-        font-size: 18px;
+    background:
+        rgba(56, 189, 248, 0.20);
+}
 
-        padding-right: 40px;
-    }
 
-    /* Company + Date stack */
-    .role-meta {
+/* HIDE TITLE */
+.expertise-card .expertise-item.auto-hover span {
 
-        flex-direction: column;
+    opacity: 0;
 
-        align-items: flex-start;
+    transform: translateY(-8px);
+}
 
-        gap: 4px;
-    }
 
-    /* Toggle button */
-    .role-toggle-btn {
+/* SHOW DESCRIPTION */
+.expertise-card .expertise-item.auto-hover .expertise-desc {
 
-        top: 14px;
-        right: 14px;
+    opacity: 1;
 
-        width: 32px;
-        height: 32px;
+    transform: translateY(-50%);
+}
 
-        padding: 0;
+/* =========================
+   AUTO HOVER PREMIUM EFFECT
+========================= */
 
-        display: flex;
+.expertise-card .expertise-item.auto-hover {
 
-        align-items: center;
-        justify-content: center;
-    }
+    transform:
+        translateY(-6px) scale(1.02);
 
+    background:
+        linear-gradient(135deg,
+            rgba(8, 145, 178, 0.42),
+            rgba(14, 165, 233, 0.28));
+
+    border-color:
+        rgba(125, 211, 252, 0.65);
+
+    box-shadow:
+        0 0 0 1px rgba(125, 211, 252, 0.20),
+        0 18px 42px rgba(14, 165, 233, 0.28),
+        0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+
+/* LEFT BORDER */
+.expertise-card .expertise-item.auto-hover::before {
+
+    width: 6px;
+
+    background:
+        linear-gradient(180deg,
+            #a5f3fc,
+            #67e8f9,
+            #38bdf8);
+
+    box-shadow:
+        0 0 18px rgba(103, 232, 249, 0.95);
+}
+
+
+/* ICON */
+.expertise-card .expertise-item.auto-hover i {
+
+    transform: scale(1.12);
+
+    background:
+        rgba(103, 232, 249, 0.22);
+
+    color: #a5f3fc;
+
+    box-shadow:
+        0 0 18px rgba(56, 189, 248, 0.45);
+}
+
+
+/* TITLE */
+.expertise-card .expertise-item.auto-hover span {
+
+    opacity: 0;
+
+    transform:
+        translateY(-12px);
+
+    transition: 0.3s ease;
+}
+
+
+/* DESCRIPTION */
+.expertise-card .expertise-item.auto-hover .expertise-desc {
+
+    opacity: 1;
+
+    transform: translateY(-50%);
+
+    color: #f0f9ff;
+
+    text-shadow:
+        0 0 10px rgba(255, 255, 255, 0.08);
 }
