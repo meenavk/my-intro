@@ -1,49 +1,106 @@
 // =========================
-// LOAD ROLES
+// IMPORTS
 // =========================
 
-export async function loadRoles() {
+import { initializeProjectCarousel }
+    from "../ui/projectCarousel.js";
 
-    const rolesContainer =
-        document.getElementById("roles-container");
 
-    if (!rolesContainer) return;
+// =========================
+// LOAD PROJECTS
+// =========================
 
-    const roleNumbers =
-        [7, 6, 5, 4, 3, 2, 1];
+export async function loadProjects() {
 
-    let html = "";
+    const container =
+        document.getElementById("projects-container");
 
-    for (const role of roleNumbers) {
+    if (!container) return;
 
-        try {
+    try {
 
-            const response =
-                await fetch(
-                    `sections/roles/role-${role}.html`
-                );
+        // Load main projects section
 
-            if (!response.ok) {
+        const response =
+            await fetch("sections/projects.html");
 
-                console.warn(
-                    `Role file missing: role-${role}.html`
-                );
-
-                continue;
-            }
-
-            html += await response.text();
-
-        } catch (error) {
+        if (!response.ok) {
 
             console.error(
-                "Role load error:",
-                role,
-                error
+                "projects.html missing"
             );
 
+            return;
         }
-    }
 
-    rolesContainer.innerHTML = html;
+        container.innerHTML =
+            await response.text();
+
+        // Project cards wrapper
+
+        const wrapper =
+            document.getElementById(
+                "projects-wrapper"
+            );
+
+        if (!wrapper) {
+
+            console.error(
+                "projects-wrapper not found"
+            );
+
+            return;
+        }
+
+        const projectNumbers =
+            [1, 2, 3, 4, 5];
+
+        let html = "";
+
+        for (const id of projectNumbers) {
+
+            try {
+
+                const projectResponse =
+                    await fetch(
+                        `sections/projects/project-${id}.html`
+                    );
+
+                if (!projectResponse.ok) {
+
+                    console.warn(
+                        `Project file missing: project-${id}.html`
+                    );
+
+                    continue;
+                }
+
+                html +=
+                    await projectResponse.text();
+
+            } catch (error) {
+
+                console.error(
+                    "Project load error:",
+                    id,
+                    error
+                );
+            }
+        }
+
+        // Insert all projects at once
+
+        wrapper.innerHTML = html;
+
+        // Initialize carousel
+
+        initializeProjectCarousel();
+
+    } catch (error) {
+
+        console.error(
+            "Projects load failed",
+            error
+        );
+    }
 }
