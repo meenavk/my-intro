@@ -10,152 +10,150 @@ export function initializeToggles() {
 
             // Summary
 
-            if (
-                e.target.id ===
-                "toggleSummaryBtn"
-            ) {
-
-                toggleSection(
-                    e.target,
-                    "detailedSummary",
-                    "Show Detailed",
-                    "Show Less"
+            const summaryBtn =
+                e.target.closest(
+                    "#toggleSummaryBtn"
                 );
 
+            if (summaryBtn) {
+
+                toggleSection(
+                    summaryBtn,
+                    "detailedSummary"
+                );
+
+                return;
             }
 
             // About
 
-            if (
-                e.target.id ===
-                "toggleAboutBtn"
-            ) {
-
-                toggleSection(
-                    e.target,
-                    "detailedAbout",
-                    "Show Detailed",
-                    "Show Less"
+            const aboutBtn =
+                e.target.closest(
+                    "#toggleAboutBtn"
                 );
 
+            if (aboutBtn) {
+
+                toggleSection(
+                    aboutBtn,
+                    "detailedAbout"
+                );
+
+                return;
             }
 
             // Expertise
 
-            if (
-                e.target.id ===
-                "toggleExpertiseBtn"
-            ) {
-
-                toggleSection(
-                    e.target,
-                    "detailedExpertise",
-                    "Show Detailed",
-                    "Show Less"
+            const expertiseBtn =
+                e.target.closest(
+                    "#toggleExpertiseBtn"
                 );
 
+            if (expertiseBtn) {
+
+                toggleSection(
+                    expertiseBtn,
+                    "detailedExpertise"
+                );
+
+                return;
             }
 
             // Skills
 
-            if (
-                e.target.id ===
-                "toggleSkillsBtn"
-            ) {
-
-                toggleSection(
-                    e.target,
-                    "allSkills",
-                    "Show All",
-                    "Show Less"
+            const skillsBtn =
+                e.target.closest(
+                    "#toggleSkillsBtn"
                 );
 
+            if (skillsBtn) {
+
+                toggleSection(
+                    skillsBtn,
+                    "allSkills"
+                );
+
+                return;
             }
 
             // Education
 
-            if (
-                e.target.id ===
-                "toggleEducationBtn"
-            ) {
-
-                toggleSection(
-                    e.target,
-                    "detailedEducation",
-                    "Show Detailed",
-                    "Show Less"
+            const educationBtn =
+                e.target.closest(
+                    "#toggleEducationBtn"
                 );
 
+            if (educationBtn) {
+
+                toggleSection(
+                    educationBtn,
+                    "detailedEducation"
+                );
+
+                return;
             }
 
             // Technologies
 
-            if (
-                e.target.id ===
-                "toggleTechnologiesBtn"
-            ) {
-
-                toggleSection(
-                    e.target,
-                    "detailedTechnologies",
-                    "Show Detailed",
-                    "Show Less"
+            const technologiesBtn =
+                e.target.closest(
+                    "#toggleTechnologiesBtn"
                 );
 
+            if (technologiesBtn) {
+
+                toggleSection(
+                    technologiesBtn,
+                    "detailedTechnologies"
+                );
+
+                return;
             }
 
-            // Experience
+            // =========================
+            // EXPERIENCE
+            // =========================
 
-            if (
-                e.target.matches(
+            const roleBtn =
+                e.target.closest(
                     ".role-toggle-btn"
-                )
-            ) {
+                );
+
+            if (roleBtn) {
 
                 const group =
-                    e.target.closest(
+                    roleBtn.closest(
                         ".experience-group"
                     );
 
                 if (!group) return;
 
                 const isOpen =
-                    group.classList.contains(
+                    group.classList.toggle(
                         "active"
                     );
 
-                if (isOpen) {
+                updateButtonIcon(
+                    roleBtn,
+                    isOpen
+                );
 
-                    group.classList.remove(
-                        "active"
-                    );
-
-                    e.target.textContent =
-                        "Show Details";
-
-                } else {
-
-                    group.classList.add(
-                        "active"
-                    );
-
-                    e.target.textContent =
-                        "Show Less";
-
-                }
-
+                return;
             }
 
-            // Projects
+            // =========================
+            // PROJECTS
+            // =========================
 
-            if (
-                e.target.matches(
+            const projectBtn =
+                e.target.closest(
                     ".project-toggle-btn"
-                )
-            ) {
+                );
+
+            if (projectBtn) {
 
                 const group =
-                    e.target.closest(
+                    projectBtn.closest(
                         ".project-group"
                     );
 
@@ -169,26 +167,11 @@ export function initializeToggles() {
                 if (!details) return;
 
                 const isOpen =
-                    group.classList.contains(
+                    group.classList.toggle(
                         "active"
                     );
 
                 if (isOpen) {
-
-                    details.style.maxHeight =
-                        "0px";
-
-                    details.style.padding =
-                        "0 22px";
-
-                    group.classList.remove(
-                        "active"
-                    );
-
-                    e.target.textContent =
-                        "Show Details";
-
-                } else {
 
                     details.style.maxHeight =
                         details.scrollHeight +
@@ -197,15 +180,22 @@ export function initializeToggles() {
                     details.style.padding =
                         "18px 22px";
 
-                    group.classList.add(
-                        "active"
-                    );
+                } else {
 
-                    e.target.textContent =
-                        "Show Less";
+                    details.style.maxHeight =
+                        "0px";
+
+                    details.style.padding =
+                        "0 22px";
 
                 }
 
+                updateButtonIcon(
+                    projectBtn,
+                    isOpen
+                );
+
+                return;
             }
 
         }
@@ -215,14 +205,12 @@ export function initializeToggles() {
 
 
 // =========================
-// GENERIC TOGGLE HELPER
+// GENERIC SECTION TOGGLE
 // =========================
 
 function toggleSection(
     button,
-    sectionId,
-    closedText,
-    openText
+    sectionId
 ) {
 
     const section =
@@ -233,17 +221,40 @@ function toggleSection(
     if (!section) return;
 
     const isOpen =
-        section.classList.contains(
+        section.classList.toggle(
             "show"
         );
 
-    section.classList.toggle(
-        "show"
+    updateButtonIcon(
+        button,
+        isOpen
     );
 
-    button.textContent =
+}
+
+
+// =========================
+// BUTTON ICON HELPER
+// =========================
+
+function updateButtonIcon(
+    button,
+    isOpen
+) {
+
+    const icon =
+        button.querySelector("i");
+
+    if (!icon) return;
+
+    icon.classList.toggle(
+        "fa-chevron-down",
+        !isOpen
+    );
+
+    icon.classList.toggle(
+        "fa-chevron-up",
         isOpen
-            ? closedText
-            : openText;
+    );
 
 }
