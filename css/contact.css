@@ -128,3 +128,120 @@
         min-height: auto;
     }
 }
+
+/* =========================
+   MOBILE CONTACT SECTION
+========================= */
+
+@media (max-width: 768px) {
+
+    /* Main contact card */
+    .contact-section {
+
+        text-align: center;
+    }
+
+    /* Intro text */
+    .contact-section p {
+
+        font-size: 15px;
+
+        line-height: 1.8;
+
+       
+    }
+
+    /* Contact grid */
+    .contact-grid {
+
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 12px;
+
+        
+    }
+
+    /* Contact cards */
+    .contact-card {
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        justify-content: center;
+
+        text-align: center;
+
+        min-height: 110px;
+
+        padding: 16px 12px;
+
+        border-radius: 18px;
+
+        background: rgba(255,255,255,0.05);
+
+        border: 1px solid rgba(255,255,255,0.08);
+
+        transition: all 0.3s ease;
+    }
+
+    .contact-card:hover {
+
+        transform: translateY(-3px);
+
+        border-color: rgba(56,189,248,0.35);
+
+        box-shadow:
+            0 0 18px rgba(56,189,248,0.15);
+    }
+
+    /* Icons */
+    .contact-card i {
+
+        font-size: 28px;
+
+        color: #38bdf8;
+
+        margin-bottom: 10px;
+    }
+
+    /* Titles */
+    .contact-card h4 {
+
+        margin: 0;
+
+        font-size: 14px;
+
+        font-weight: 600;
+
+        color: #ffffff;
+    }
+
+    /* Links */
+    .contact-card a {
+
+        margin-top: 6px;
+
+        font-size: 11px;
+
+        color: rgba(255,255,255,0.7);
+
+        text-decoration: none;
+
+        word-break: break-word;
+    }
+
+    /* Optional: hide long URLs */
+    .contact-card .contact-url {
+
+        display: none;
+    }
+
+    .contact-section {
+        padding: 0px 0px;
+    }
+}
