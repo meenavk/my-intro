@@ -225,3 +225,22 @@ footer {
 
   font-size: 14px;
 }
+
+
+
+/* =========================
+   MOBILE RESPONSIVENESS
+========================= */
+
+@media (max-width: 768px) {
+
+    .card {
+
+        margin: 10px auto;
+
+        padding: 12px 10px;
+
+        padding-top: 1px;
+    }
+
+}
