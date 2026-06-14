@@ -41,4 +41,14 @@
     opacity: 1;
 
     transform: translateX(0);
+    
+}
+
+@media (max-width: 768px) {
+
+    .show-section {
+
+        padding: 0px 5px;
+    }
+
 }
