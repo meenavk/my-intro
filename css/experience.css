@@ -33,7 +33,7 @@
 .experience-group {
   position: relative;
 
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 
@@ -114,7 +114,7 @@
 
 /* PREVIOUS ROLE */
 .secondary-role .experience-role {
-  border-left: 4px solid rgba(255,255,255,0.18);
+  border-left: 4px solid rgba(255, 255, 255, 0.18);
 }
 
 
@@ -143,9 +143,9 @@
 
 
 .secondary-badge {
-  background: rgba(255,255,255,0.08);
+  background: rgba(255, 255, 255, 0.08);
 
-  color: rgba(255,255,255,0.7);
+  color: rgba(255, 255, 255, 0.7);
 }
 
 
@@ -167,7 +167,7 @@
 
   font-size: 15px;
 
-  color: rgba(255,255,255,0.75);
+  color: rgba(255, 255, 255, 0.75);
 }
 
 
@@ -189,7 +189,7 @@
 
   font-size: 14px;
 
-  color: rgba(255,255,255,0.88);
+  color: rgba(255, 255, 255, 0.88);
 }
 
 
@@ -265,7 +265,7 @@
 
   line-height: 1.7;
 
-  color: rgba(255,255,255,0.82);
+  color: rgba(255, 255, 255, 0.82);
 }
 
 
@@ -327,7 +327,7 @@
 
   font-size: 15px;
 
-  color: rgba(255,255,255,0.75);
+  color: rgba(255, 255, 255, 0.75);
 }
 
 
@@ -340,4 +340,87 @@
   color: #38bdf8;
 
   white-space: nowrap;
+}
+
+
+/* =========================
+   MOBILE RESPONSIVENESS
+========================= */
+
+@media (max-width: 768px) {
+
+    .experience-wrapper {
+
+        margin-top: 10px;
+
+        padding-left: 22px;
+    }
+
+    /* Vertical timeline */
+    .experience-wrapper::before {
+
+        left: 8px;
+    }
+
+    /* Timeline dot */
+    .experience-group::before {
+
+        left: -19px;
+        top: 30px;
+
+        width: 12px;
+        height: 12px;
+    }
+
+    /* Connector line */
+    .experience-group::after {
+
+        left: -7px;
+        top: 36px;
+
+        width: 6px;
+        height: 2px;
+    }
+
+    /* Card */
+    .experience-role {
+
+        padding: 16px;
+    }
+
+    /* Title */
+    .experience-role h3 {
+
+        font-size: 18px;
+
+        padding-right: 40px;
+    }
+
+    /* Company + Date stack */
+    .role-meta {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 4px;
+    }
+
+    /* Toggle button */
+    .role-toggle-btn {
+
+        top: 14px;
+        right: 14px;
+
+        width: 32px;
+        height: 32px;
+
+        padding: 0;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+    }
+
 }
