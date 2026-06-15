@@ -1,14 +1,12 @@
 .contact-section {
 
-    padding: 0px 0%;
+    padding: 0;
 }
-
 
 .contact-card-main {
 
     text-align: center;
 }
-
 
 .contact-description {
 
@@ -23,6 +21,9 @@
     font-size: 1.02rem;
 }
 
+/* =========================
+   CONTACT GRID
+========================= */
 
 .contact-grid {
 
@@ -30,9 +31,8 @@
 
     grid-template-columns: repeat(4, 1fr);
 
-    gap: 20px;    
+    gap: 20px;
 }
-
 
 .contact-card {
 
@@ -44,31 +44,32 @@
 
     justify-content: center;
 
-    gap: 12px;  
-    
-    background: rgba(255, 255, 255, 0.04);
+    gap: 12px;
 
-    border: 1px solid rgba(255, 255, 255, 0.06);
+    background: rgba(255,255,255,0.04);
+
+    border: 1px solid rgba(255,255,255,0.06);
 
     border-radius: 18px;
-
-    transition: 0.25s ease;
 
     color: #e2e8f0;
 
     min-height: 190px;
-}
 
+    transition: all 0.25s ease;
+}
 
 .contact-card:hover {
 
     transform: translateY(-4px);
 
-    background: rgba(56, 189, 248, 0.10);
+    background: rgba(56,189,248,0.10);
 
-    border-color: rgba(56, 189, 248, 0.20);
+    border-color: rgba(56,189,248,0.25);
+
+    box-shadow:
+        0 0 20px rgba(56,189,248,0.15);
 }
-
 
 .contact-card i {
 
@@ -77,14 +78,14 @@
     color: #38bdf8;
 }
 
-
 .contact-card h3 {
 
-    font-size: 1rem;
+    margin: 0;
 
     color: #f8fafc;
-}
 
+    font-size: 1rem;
+}
 
 .contact-card span {
 
@@ -92,14 +93,56 @@
 
     color: #cbd5e1;
 
-    word-break: break-word;
-
     line-height: 1.6;
+
+    word-break: break-word;
 }
 
+/* =========================
+   VISITOR COUNTER
+========================= */
+
+.visitor-counter {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-top: 25px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(255,255,255,0.08);
+
+    color: #cbd5e1;
+
+    font-size: 14px;
+}
+
+.visitor-counter i {
+
+    color: #38bdf8;
+
+    font-size: 16px;
+}
+
+.visitor-counter img {
+
+    height: 28px;
+
+    border-radius: 8px;
+
+    background: rgba(255,255,255,0.05);
+
+    padding: 2px;
+}
 
 /* =========================
-   RESPONSIVE
+   TABLET
 ========================= */
 
 @media (max-width: 900px) {
@@ -110,138 +153,70 @@
     }
 }
 
-
-@media (max-width: 600px) {
-
-    .contact-section {
-
-        padding: 70px 20px;
-    }
-
-    .contact-grid {
-
-        grid-template-columns: 1fr;
-    }
-
-    .contact-card {
-
-        min-height: auto;
-    }
-}
-
 /* =========================
-   MOBILE CONTACT SECTION
+   MOBILE
 ========================= */
 
 @media (max-width: 768px) {
 
-    /* Main contact card */
     .contact-section {
 
-        text-align: center;
+        padding: 0;
     }
 
-    /* Intro text */
-    .contact-section p {
+    .contact-description {
 
         font-size: 15px;
 
         line-height: 1.8;
 
-       
+        margin: 20px auto;
     }
 
-    /* Contact grid */
     .contact-grid {
 
-        display: grid;
-
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
 
         gap: 12px;
-
-        
     }
 
-    /* Contact cards */
     .contact-card {
-
-        display: flex;
-
-        flex-direction: column;
-
-        align-items: center;
-
-        justify-content: center;
-
-        text-align: center;
 
         min-height: 110px;
 
         padding: 16px 12px;
-
-        border-radius: 18px;
-
-        background: rgba(255,255,255,0.05);
-
-        border: 1px solid rgba(255,255,255,0.08);
-
-        transition: all 0.3s ease;
     }
 
-    .contact-card:hover {
-
-        transform: translateY(-3px);
-
-        border-color: rgba(56,189,248,0.35);
-
-        box-shadow:
-            0 0 18px rgba(56,189,248,0.15);
-    }
-
-    /* Icons */
     .contact-card i {
 
-        font-size: 28px;
+        font-size: 24px;
 
-        color: #38bdf8;
-
-        margin-bottom: 10px;
+        margin-bottom: 4px;
     }
 
-    /* Titles */
-    .contact-card h4 {
-
-        margin: 0;
+    .contact-card h3 {
 
         font-size: 14px;
-
-        font-weight: 600;
-
-        color: #ffffff;
     }
 
-    /* Links */
-    .contact-card a {
-
-        margin-top: 6px;
+    .contact-card span {
 
         font-size: 11px;
-
-        color: rgba(255,255,255,0.7);
-
-        text-decoration: none;
-
-        word-break: break-word;
     }
 
-    /* Optional: hide long URLs */
-    .contact-card .contact-url {
+    .visitor-counter {
 
-        display: none;
+        margin-top: 18px;
+
+        padding-top: 16px;
+
+        font-size: 13px;
+
+        gap: 8px;
     }
 
-    .contact-section {
-        padding: 0px 0px;
+    .visitor-counter img {
+
+        height: 18px;
     }
 }
